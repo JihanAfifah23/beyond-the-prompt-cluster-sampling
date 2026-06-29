@@ -24,23 +24,23 @@ Repository ini bertujuan menyajikan alur analisis yang terdokumentasi secara sis
 
 ---
 
-# Struktur Repository
+## Struktur Repository
 
 ```text
 Beyond-the-Prompt/
+├── README.md
 ├── data/
 │   └── Data_Mentah.xlsx
 ├── script/
 │   └── Analisis_Cluster_Sampling.R
-├── output/
-│   └── Output_R.pdf
-└── README.md
+└── randomisasi/
+    └── Hasil_Cluster.pdf
 ```
 
+- **README.md** : Dokumentasi lengkap proyek.
 - **data/** : Berisi data mentah hasil survei.
 - **script/** : Berisi seluruh script analisis menggunakan R.
-- **output/** : Berisi hasil output analisis dari R.
-- **README.md** : Dokumentasi lengkap proyek.
+- **randomisasi/** : Berisi hasil pemilihan klaster (kelas) yang terpilih.
   
 <h1 id="daftar-isi"> Daftar Isi</h1>
 
