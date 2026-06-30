@@ -106,12 +106,12 @@ Penelitian ini bertujuan untuk:
 
 Penelitian ini merupakan penelitian survei kuantitatif yang bertujuan mengestimasi intensitas pemanfaatan ChatGPT dalam aktivitas intelektual mahasiswa Program Studi Statistika Universitas Mataram. Pengambilan sampel dilakukan menggunakan metode Cluster Sampling Dua Tahap (Two-Stage Cluster Sampling), dengan kelas sebagai unit klaster pada tahap pertama.
 
-Populasi penelitian terdiri atas enam kelas mahasiswa aktif Program Studi Statistika Universitas Mataram. Dari enam kelas tersebut dipilih dua kelas secara acak sebagai klaster sampel. Selanjutnya, pada kedua kelas terpilih dilakukan pengambilan sampel mahasiswa secara Simple Random Sampling (SRS) sehingga diperoleh 30 responden dari total 55 mahasiswa pada klaster terpilih.
-Data dikumpulkan menggunakan kuesioner skala Likert yang terdiri atas 12 butir pertanyaan mengenai intensitas pemanfaatan ChatGPT dalam aktivitas intelektual mahasiswa. Sebelum digunakan pada analisis utama, instrumen diuji melalui uji validitas dan uji reliabilitas untuk memastikan kualitas pengukuran.
+Populasi penelitian terdiri atas enam kelas mahasiswa aktif Program Studi Statistika Universitas Mataram. Pada tahap pertama, dua kelas dipilih secara acak menggunakan fitur pengacakan pada Microsoft Excel sebagai klaster sampel. Selanjutnya, pada kedua klaster terpilih dilakukan pengambilan sampel mahasiswa menggunakan Simple Random Sampling (SRS) sehingga diperoleh 30 responden dari total 55 mahasiswa pada klaster terpilih. Pengumpulan data dilakukan melalui Google Form menggunakan kuesioner skala Likert 1–4 yang terdiri atas 12 butir pertanyaan mengenai intensitas pemanfaatan ChatGPT dalam aktivitas intelektual mahasiswa.
 
-Sebelum pengumpulan data utama, kuesioner terlebih dahulu diuji coba (pilot test) kepada 5 responden di luar sampel penelitian untuk menguji validitas dan reliabilitas instrumen. Hanya butir pertanyaan yang memenuhi kriteria valid dan reliabel yang digunakan pada pengumpulan data utama.
+Sebelum pengumpulan data utama, instrumen penelitian terlebih dahulu diuji coba (pilot test) kepada 5 responden di luar sampel penelitian. Hasil uji coba digunakan untuk mengevaluasi validitas dan reliabilitas instrumen sehingga hanya butir pertanyaan yang memenuhi kriteria yang digunakan pada pengumpulan data utama.
 
-Seluruh proses pengolahan data dilakukan menggunakan bahasa pemrograman R pada lingkungan RStudio. Tahapan analisis meliputi import data, uji validitas, uji reliabilitas, data cleaning, pembobotan sampel berdasarkan desain survei, serta analisis kualitas estimasi melalui perhitungan Standard Error (SE), Confidence Interval (CI) 95%, Design Effect (DEFF), dan Relative Standard Error (RSE).
+Seluruh proses pengolahan data dilakukan menggunakan bahasa pemrograman R pada lingkungan RStudio. Tahapan analisis meliputi import data, uji validitas, uji reliabilitas, data cleaning (meliputi pemeriksaan missing value, data duplikat, dan outlier menggunakan metode Interquartile Range (IQR)), pembobotan sampel berdasarkan desain survei, serta analisis kualitas estimasi melalui perhitungan Standard Error (SE), Confidence Interval (CI) 95%, Design Effect (DEFF), dan Relative Standard Error (RSE).
+
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
 </p>
@@ -588,11 +588,11 @@ Secara keseluruhan, penelitian ini menunjukkan bahwa pemanfaatan ChatGPT oleh ma
 
 ## Rekomendasi
 
-Berdasarkan temuan tersebut, beberapa rekomendasi yang dapat diajukan adalah sebagai berikut.
+Berdasarkan temuan tersebut, beberapa rekomendasi taktis yang dapat diajukan adalah sebagai berikut.
 
-Tingkat pemanfaatan ChatGPT yang tergolong tinggi pada mahasiswa Program Studi Statistika menunjukkan bahwa AI generatif sudah menjadi bagian dari kebiasaan belajar sehari-hari. Oleh karena itu, program studi disarankan untuk menyusun pedoman etika penggunaan AI dalam pengerjaan tugas akademik, agar pemanfaatannya tetap menunjang proses belajar dan tidak menggantikan kemampuan analitis mahasiswa secara mandiri.
+Berdasarkan estimasi rata-rata skor pemanfaatan ChatGPT sebesar 41,50 yang tergolong tinggi dan mendekati nilai maksimal pada skala instrumen (lihat bagian Hasil Analisis Kualitas Estimasi), Program Studi Statistika Universitas Mataram direkomendasikan untuk menyusun pedoman tertulis mengenai batasan penggunaan AI pada pengerjaan tugas individu, khususnya untuk mata kuliah yang menuntut kemampuan analisis mandiri seperti Metode Statistika dan Praktikum Komputasi, serta mensosialisasikannya kepada mahasiswa pada awal semester berikutnya.
 
-Selain itu, integrasi materi literasi AI ke dalam kurikulum dapat dipertimbangkan, sehingga mahasiswa tidak hanya terampil menggunakan ChatGPT secara teknis, tetapi juga memahami batasan, risiko, dan cara memverifikasi hasil yang diberikan oleh AI, khususnya dalam konteks analisis statistik dan pemrograman.
+Selain itu, mengingat seluruh 12 butir instrumen penelitian mencakup aspek pemanfaatan ChatGPT mulai dari pemahaman materi, penyelesaian tugas, hingga perbaikan sintaks pemrograman (lihat bagian Hasil Uji Validitas), program studi direkomendasikan untuk mengintegrasikan minimal satu sesi materi literasi AI berdurasi 2–3 jam ke dalam mata kuliah pengantar di semester awal, dengan fokus pada cara memverifikasi keakuratan output AI dalam perhitungan dan interpretasi statistik.
 
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
