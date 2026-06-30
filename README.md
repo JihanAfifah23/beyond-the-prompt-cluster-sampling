@@ -59,6 +59,7 @@ Beyond-the-Prompt/
   - [6. Analisis Kualitas Estimasi](#6-analisis-kualitas-estimasi)
 - [Hasil dan Pembahasan](#hasil-dan-pembahasan)
 - [Kesimpulan](#kesimpulan)
+- [Rekomendasi](#rekomendasi)
 - [Referensi](#referensi)
 - [Link Kuesioner](#link-kuesioner)
 
@@ -67,6 +68,9 @@ Beyond-the-Prompt/
 # Latar Belakang
 
 Perkembangan **Artificial Intelligence (AI)**, khususnya **ChatGPT**, telah membawa perubahan dalam proses pembelajaran di perguruan tinggi. Mahasiswa memanfaatkan ChatGPT tidak hanya untuk memperoleh informasi, tetapi juga untuk memahami materi perkuliahan, menyelesaikan tugas, membantu analisis statistik, memperbaiki sintaks pemrograman, hingga mengevaluasi hasil pekerjaannya sendiri.
+
+Bagi mahasiswa Program Studi Statistika, pemanfaatan ChatGPT memiliki relevansi yang lebih spesifik dibandingkan program studi lain, mengingat aktivitas perkuliahan di bidang ini sarat dengan pengolahan data, analisis statistik, dan pemrograman, di mana ChatGPT dapat digunakan baik sebagai alat bantu pemahaman konsep maupun penyelesaian tugas teknis. Kondisi ini memunculkan pertanyaan penting mengenai sejauh mana ketergantungan mahasiswa terhadap AI dalam proses berpikir dan menyelesaikan permasalahan statistik secara mandiri. Sayangnya, penelitian yang secara khusus mengukur intensitas pemanfaatan ChatGPT pada mahasiswa Statistika, khususnya di lingkungan Universitas Mataram, masih sangat terbatas, sehingga penelitian ini diharapkan dapat menjadi salah satu rujukan awal mengenai topik tersebut.
+
 
 Meningkatnya pemanfaatan ChatGPT mendorong perlunya pengukuran secara kuantitatif mengenai intensitas penggunaannya di lingkungan akademik. Oleh karena itu, penelitian ini menggunakan pendekatan survei dengan desain **Cluster Sampling Dua Tahap** agar diperoleh estimasi yang representatif terhadap populasi mahasiswa Program Studi Statistika Universitas Mataram.
 
@@ -102,6 +106,8 @@ Penelitian ini merupakan penelitian survei kuantitatif yang bertujuan mengestima
 
 Populasi penelitian terdiri atas enam kelas mahasiswa aktif Program Studi Statistika Universitas Mataram. Dari enam kelas tersebut dipilih dua kelas secara acak sebagai klaster sampel. Selanjutnya, pada kedua kelas terpilih dilakukan pengambilan sampel mahasiswa secara Simple Random Sampling (SRS) sehingga diperoleh 30 responden dari total 55 mahasiswa pada klaster terpilih.
 Data dikumpulkan menggunakan kuesioner skala Likert yang terdiri atas 12 butir pertanyaan mengenai intensitas pemanfaatan ChatGPT dalam aktivitas intelektual mahasiswa. Sebelum digunakan pada analisis utama, instrumen diuji melalui uji validitas dan uji reliabilitas untuk memastikan kualitas pengukuran.
+
+Sebelum pengumpulan data utama, kuesioner terlebih dahulu diuji coba (pilot test) kepada 5 responden di luar sampel penelitian untuk menguji validitas dan reliabilitas instrumen. Hanya butir pertanyaan yang memenuhi kriteria valid dan reliabel yang digunakan pada pengumpulan data utama.
 
 Seluruh proses pengolahan data dilakukan menggunakan bahasa pemrograman R pada lingkungan RStudio. Tahapan analisis meliputi import data, uji validitas, uji reliabilitas, data cleaning, pembobotan sampel berdasarkan desain survei, serta analisis kualitas estimasi melalui perhitungan Standard Error (SE), Confidence Interval (CI) 95%, Design Effect (DEFF), dan Relative Standard Error (RSE).
 <p align="right">
@@ -213,6 +219,8 @@ for(i in 1:ncol(item)){
 - `hasil$p.value` digunakan untuk memperoleh nilai signifikansi.
 - `if...else` digunakan untuk menentukan valid atau tidaknya setiap item.
 
+*Catatan:* Sebelum diterapkan pada data utama, proses uji validitas yang sama telah dilakukan terlebih dahulu pada data pilot test (5 responden di luar sampel). Seluruh item pada pilot test menunjukkan p-value di bawah 0,001, sehingga dinyatakan valid.
+
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
 </p>
@@ -252,6 +260,8 @@ if(hasil_alpha$total$raw_alpha >= 0.70){
 - `hasil_alpha$total$raw_alpha` digunakan untuk mengambil nilai Cronbach's Alpha.
 - `if...else` digunakan untuk menentukan apakah instrumen reliabel atau tidak.
 
+*Catatan:* Pengujian reliabilitas yang sama juga telah dilakukan pada data pilot test (5 responden), dengan hasil Cronbach's Alpha sebesar 0,938. Dengan demikian, instrumen dinyatakan layak digunakan tanpa revisi sebelum dilanjutkan ke pengumpulan data utama.
+
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
 </p>
@@ -262,7 +272,7 @@ if(hasil_alpha$total$raw_alpha >= 0.70){
 
 ### Tujuan
 
-Data cleaning dilakukan untuk memastikan data yang digunakan dalam analisis memiliki kualitas yang baik melalui pemeriksaan struktur data, *missing value*, data duplikat, serta ringkasan statistik.
+Data cleaning dilakukan untuk memastikan data yang digunakan dalam analisis memiliki kualitas yang baik melalui pemeriksaan struktur data, *missing value*, data duplikat, data outlier, serta ringkasan statistik.
 
 ### Sintaks
 
@@ -284,6 +294,23 @@ data <- data[!duplicated(data), ]
 
 # Ringkasan data
 summary(data)
+
+# Cek outlier menggunakan boxplot pada skor total
+boxplot(skor_total, main = "Boxplot Skor Total", ylab = "Skor Total")
+
+# Mendeteksi outlier menggunakan metode IQR
+Q1 <- quantile(skor_total, 0.25)
+Q3 <- quantile(skor_total, 0.75)
+IQR_val <- Q3 - Q1
+
+batas_bawah <- Q1 - 1.5 * IQR_val
+batas_atas  <- Q3 + 1.5 * IQR_val
+
+outlier <- skor_total[skor_total < batas_bawah | skor_total > batas_atas]
+outlier
+
+# Menampilkan baris data yang terindikasi outlier
+data[skor_total < batas_bawah | skor_total > batas_atas, ]
 ```
 
 ### Keterangan
@@ -294,6 +321,9 @@ summary(data)
 - `data[duplicated(data), ]` digunakan untuk menampilkan data duplikat.
 - `data <- data[!duplicated(data), ]` digunakan untuk menghapus data duplikat.
 - `summary(data)` digunakan untuk menampilkan ringkasan statistik setiap variabel.
+- `boxplot()` digunakan untuk memvisualisasikan sebaran skor total dan mengindikasi keberadaan outlier secara grafis.
+- `quantile()` digunakan untuk menghitung kuartil 1 (Q1) dan kuartil 3 (Q3) dari skor total.
+- Metode **IQR (Interquartile Range)** digunakan untuk mendeteksi outlier, yaitu nilai yang berada di bawah `Q1 - 1.5×IQR` atau di atas `Q3 + 1.5×IQR`.
 
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
@@ -362,7 +392,7 @@ library(survey)
 
 data$Skor_Total <- rowSums(item)
 
-data$bobot <- 5.5
+data$bobot <- w_akhir
 
 data$Kelas <- as.factor(data$Kelas)
 
@@ -469,13 +499,12 @@ Nilai Cronbach's Alpha yang melebihi 0,90 menunjukkan tingkat konsistensi intern
 | Jumlah Responden | 30 |
 | Missing Value | 0 |
 | Data Duplikat | 0 |
+| Outlier (Metode IQR) | 0 |
 | Data Siap Dianalisis | 30 |
 
 ### Interpretasi
 
-Proses data cleaning menunjukkan bahwa tidak terdapat **missing value** maupun data duplikat pada dataset. Dengan demikian seluruh data responden memenuhi syarat untuk dianalisis lebih lanjut.
-
----
+Proses data cleaning menunjukkan bahwa tidak terdapat *missing value*, data duplikat, maupun data outlier pada dataset. Deteksi outlier menggunakan metode IQR (*Interquartile Range*) pada skor total menunjukkan seluruh nilai berada dalam rentang batas bawah dan batas atas yang wajar, sehingga tidak ada responden yang dikeluarkan dari analisis. Dengan demikian, seluruh 30 data responden memenuhi syarat untuk dianalisis lebih lanjut.
 
 ## Hasil Pembobotan Sampel
 
@@ -551,6 +580,21 @@ Secara keseluruhan, penelitian ini menunjukkan bahwa pemanfaatan ChatGPT oleh ma
 </p>
 
 ---
+
+## Rekomendasi
+
+Berdasarkan temuan tersebut, beberapa rekomendasi yang dapat diajukan adalah sebagai berikut.
+
+Tingkat pemanfaatan ChatGPT yang tergolong tinggi pada mahasiswa Program Studi Statistika menunjukkan bahwa AI generatif sudah menjadi bagian dari kebiasaan belajar sehari-hari. Oleh karena itu, program studi disarankan untuk menyusun pedoman etika penggunaan AI dalam pengerjaan tugas akademik, agar pemanfaatannya tetap menunjang proses belajar dan tidak menggantikan kemampuan analitis mahasiswa secara mandiri.
+
+Selain itu, integrasi materi literasi AI ke dalam kurikulum dapat dipertimbangkan, sehingga mahasiswa tidak hanya terampil menggunakan ChatGPT secara teknis, tetapi juga memahami batasan, risiko, dan cara memverifikasi hasil yang diberikan oleh AI, khususnya dalam konteks analisis statistik dan pemrograman.
+
+<p align="right">
+<a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
+</p>
+
+---
+
 
 # Referensi
 
