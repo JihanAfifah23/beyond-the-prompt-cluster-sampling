@@ -504,6 +504,9 @@ Nilai Cronbach's Alpha yang melebihi 0,90 menunjukkan tingkat konsistensi intern
 | Outlier (Metode IQR) | 0 |
 | Data Siap Dianalisis | 30 |
 
+<img width="787" height="782" alt="image" src="https://github.com/user-attachments/assets/ba1bfd8f-951d-45b7-b6a1-b325c79378f0" />
+
+
 ### Interpretasi
 
 Proses data cleaning menunjukkan bahwa tidak terdapat *missing value*, data duplikat, maupun data outlier pada dataset. Deteksi outlier menggunakan metode IQR (*Interquartile Range*) pada skor total menunjukkan seluruh nilai berada dalam rentang batas bawah dan batas atas yang wajar, sehingga tidak ada responden yang dikeluarkan dari analisis. Dengan demikian, seluruh 30 data responden memenuhi syarat untuk dianalisis lebih lanjut.
