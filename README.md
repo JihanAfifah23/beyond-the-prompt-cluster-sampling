@@ -93,7 +93,6 @@ Penelitian ini bertujuan untuk:
 - Mengestimasi rata-rata terbobot.
 - Menghitung Standard Error (SE).
 - Menghitung Confidence Interval (CI) 95%.
-- Menghitung Design Effect (DEFF).
 - Menghitung Relative Standard Error (RSE) sebagai indikator kualitas estimasi.
 
 <p align="right">
@@ -433,7 +432,6 @@ RSE
 - `svymean()` digunakan untuk menghitung estimasi rata-rata terbobot.
 - `SE()` digunakan untuk menghitung **Standard Error**.
 - `confint()` digunakan untuk menghitung **Confidence Interval 95%**.
-- `deff = TRUE` digunakan untuk menghitung **Design Effect (DEFF)**.
 - `coef()` digunakan untuk mengambil nilai estimasi rata-rata.
 - `RSE` digunakan untuk menghitung **Relative Standard Error**.
 
@@ -539,7 +537,6 @@ Pembobotan dilakukan untuk menyesuaikan peluang pemilihan responden pada desain 
 | Estimasi Rata-rata | **41.50** |
 | Standard Error (SE) | **0.60** |
 | Confidence Interval 95% | **40.324 – 42.676** |
-| Design Effect (DEFF) | **0.552** |
 | Relative Standard Error (RSE) | **1.446%** |
 
 ### Interpretasi
@@ -549,8 +546,6 @@ Estimasi rata-rata skor pemanfaatan ChatGPT sebesar **41,50** menunjukkan bahwa 
 Nilai **Standard Error (SE) sebesar 0,60** menunjukkan bahwa simpangan baku estimasi relatif kecil sehingga estimasi yang diperoleh cukup stabil.
 
 Interval kepercayaan **95%** berada pada rentang **40,324 hingga 42,676**, yang berarti rata-rata populasi diperkirakan berada dalam interval tersebut.
-
-Nilai **Design Effect (DEFF) sebesar 0,552 (< 1)** menunjukkan bahwa desain Cluster Sampling yang digunakan menghasilkan varians yang kecil. 
 
 Nilai **Relative Standard Error (RSE) sebesar 1,446%** berada jauh di bawah batas **25%**, sehingga estimasi yang dihasilkan memiliki tingkat ketelitian yang sangat baik dan layak digunakan sebagai dasar penarikan kesimpulan.
 
@@ -575,8 +570,6 @@ Berdasarkan hasil analisis menggunakan metode **Cluster Sampling Dua Tahap**, di
 4. Bobot akhir setiap responden sebesar **5,50**, sesuai dengan peluang pemilihan pada desain Cluster Sampling Dua Tahap.
 
 5. Estimasi rata-rata skor pemanfaatan ChatGPT sebesar **41,50** dengan **Standard Error sebesar 0,60** dan **Confidence Interval 95% sebesar 40,324–42,676**.
-
-6. Nilai **Design Effect sebesar 0,552** serta **Relative Standard Error sebesar 1,446%** menunjukkan bahwa estimasi yang dihasilkan memiliki kualitas yang sangat baik dan tingkat ketelitian yang tinggi.
 
 Secara keseluruhan, penelitian ini menunjukkan bahwa pemanfaatan ChatGPT oleh mahasiswa Program Studi Statistika Universitas Mataram tergolong tinggi, dan pendekatan **Cluster Sampling Dua Tahap** mampu menghasilkan estimasi yang baik berdasarkan indikator kualitas estimasi yang diperoleh.
 
