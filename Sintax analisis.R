@@ -30,6 +30,7 @@ for(i in 1:ncol(item)){
 # ==========================
 #2. UJI RELIABILITAS
 # ==========================
+library(psych)
 hasil_alpha <- alpha(item)
 
 cat("\n=========================\n")
@@ -61,6 +62,23 @@ data <- data[!duplicated(data), ]
 
 # Ringkasan data
 summary(data)
+
+# Cek outlier menggunakan boxplot pada skor total
+boxplot(skor_total, main = "Boxplot Skor Total", ylab = "Skor Total")
+
+# Mendeteksi outlier menggunakan metode IQR
+Q1 <- quantile(skor_total, 0.25)
+Q3 <- quantile(skor_total, 0.75)
+IQR_val <- Q3 - Q1
+
+batas_bawah <- Q1 - 1.5 * IQR_val
+batas_atas  <- Q3 + 1.5 * IQR_val
+
+outlier <- skor_total[skor_total < batas_bawah | skor_total > batas_atas]
+outlier
+
+# Menampilkan baris data yang terindikasi outlier
+data[skor_total < batas_bawah | skor_total > batas_atas, ]
 
 #4. Pembobotan================
 # Data
@@ -104,7 +122,7 @@ library(survey)
 data$Skor_Total <- rowSums(item)
 
 # Bobot akhir
-data$bobot <- 5.5
+data$bobot <- w_akhir
 
 # Ubah Kelas menjadi faktor
 data$Kelas <- as.factor(data$Kelas)
