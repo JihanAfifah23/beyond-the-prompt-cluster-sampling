@@ -219,7 +219,7 @@ for(i in 1:ncol(item)){
 - `hasil$p.value` digunakan untuk memperoleh nilai signifikansi.
 - `if...else` digunakan untuk menentukan valid atau tidaknya setiap item.
 
-*Catatan:* Sebelum diterapkan pada data utama, proses uji validitas yang sama telah dilakukan terlebih dahulu pada data pilot test (10 responden di luar sampel). Seluruh item pada pilot test menunjukkan p-value di bawah 0,001, sehingga dinyatakan valid.
+*Catatan:* Sebelum diterapkan pada data utama, proses uji validitas yang sama telah dilakukan terlebih dahulu pada data pilot test (5 responden di luar sampel). Seluruh item pada pilot test menunjukkan p-value di bawah 0,001, sehingga dinyatakan valid.
 
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
@@ -260,7 +260,7 @@ if(hasil_alpha$total$raw_alpha >= 0.70){
 - `hasil_alpha$total$raw_alpha` digunakan untuk mengambil nilai Cronbach's Alpha.
 - `if...else` digunakan untuk menentukan apakah instrumen reliabel atau tidak.
 
-*Catatan:* Pengujian reliabilitas yang sama juga telah dilakukan pada data pilot test (10 responden), dengan hasil Cronbach's Alpha sebesar 0,938. Dengan demikian, instrumen dinyatakan layak digunakan tanpa revisi sebelum dilanjutkan ke pengumpulan data utama.
+*Catatan:* Pengujian reliabilitas yang sama juga telah dilakukan pada data pilot test (5 responden), dengan hasil Cronbach's Alpha sebesar 0,938. Dengan demikian, instrumen dinyatakan layak digunakan tanpa revisi sebelum dilanjutkan ke pengumpulan data utama.
 
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
