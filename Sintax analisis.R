@@ -29,8 +29,7 @@ for(i in 1:ncol(item)){
 }
 # ==========================
 #2. UJI RELIABILITAS
-# ==========================
-library(psych)
+# ==========================z
 hasil_alpha <- alpha(item)
 
 cat("\n=========================\n")
