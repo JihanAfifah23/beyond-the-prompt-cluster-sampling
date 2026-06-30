@@ -29,6 +29,7 @@ Repository ini bertujuan menyajikan alur analisis yang terdokumentasi secara sis
 ```text
 Beyond-the-Prompt/
 ├── README.md
+├── Executive_Summary.pdf
 ├── data/
 │   └── Data_Mentah.xlsx
 ├── script/
@@ -38,6 +39,7 @@ Beyond-the-Prompt/
 ```
 
 - **README.md** : Dokumentasi lengkap proyek.
+- **Executive_Summary.pdf** : Ringkasan penelitian.
 - **data/** : Berisi data mentah hasil survei.
 - **script/** : Berisi seluruh script analisis menggunakan R.
 - **randomisasi/** : Berisi hasil pemilihan klaster (kelas) yang terpilih.
