@@ -34,8 +34,10 @@ Beyond-the-Prompt/
 │   └── Data_Mentah.xlsx
 ├── script/
 │   └── Analisis_Cluster_Sampling.R
-└── randomisasi/
-    └── Hasil_Cluster.pdf
+├── randomisasi/
+│   └── Hasil_Cluster.pdf
+└── formulir/
+    └── Formulir_Pertanyaan.pdf
 ```
 
 - **README.md** : Dokumentasi lengkap proyek.
@@ -43,6 +45,7 @@ Beyond-the-Prompt/
 - **data/** : Berisi data mentah hasil survei.
 - **script/** : Berisi seluruh script analisis menggunakan R.
 - **randomisasi/** : Berisi hasil pemilihan klaster (kelas) yang terpilih.
+- **formulir/** : Berisi formulir pertanyaan (kuesioner) yang digunakan dalam proses pengumpulan data.
   
 <h1 id="daftar-isi"> Daftar Isi</h1>
 
