@@ -550,11 +550,11 @@ Nilai **Standard Error (SE) sebesar 0,60** menunjukkan bahwa simpangan baku esti
 
 Interval kepercayaan **95%** berada pada rentang **40,324 hingga 42,676**, yang berarti rata-rata populasi diperkirakan berada dalam interval tersebut.
 
-Nilai **Design Effect (DEFF) sebesar 0,552 (< 1)** menunjukkan bahwa desain Cluster Sampling yang digunakan menghasilkan varians yang lebih kecil dibandingkan dengan *Simple Random Sampling* pada data ini.
+Nilai **Design Effect (DEFF) sebesar 0,552 (< 1)** menunjukkan bahwa desain Cluster Sampling yang digunakan menghasilkan varians yang kecil. 
 
 Nilai **Relative Standard Error (RSE) sebesar 1,446%** berada jauh di bawah batas **25%**, sehingga estimasi yang dihasilkan memiliki tingkat ketelitian yang sangat baik dan layak digunakan sebagai dasar penarikan kesimpulan.
 
-Secara keseluruhan, indikator kualitas estimasi menunjukkan bahwa desain Cluster Sampling Dua Tahap memberikan hasil estimasi yang baik pada penelitian ini. Nilai DEFF yang lebih kecil dari 1 mengindikasikan bahwa varians estimasi lebih kecil dibandingkan jika menggunakan Simple Random Sampling pada data yang sama. Selain itu, nilai RSE yang jauh di bawah batas 25% menunjukkan bahwa estimasi yang diperoleh memiliki tingkat presisi yang tinggi sehingga hasil penelitian dapat dipercaya sebagai gambaran karakteristik populasi yang diteliti.
+Secara keseluruhan, indikator kualitas estimasi menunjukkan bahwa desain Cluster Sampling Dua Tahap memberikan hasil estimasi yang baik pada penelitian ini. Nilai DEFF yang lebih kecil dari 1 mengindikasikan bahwa varians estimasi kecil. Selain itu, nilai RSE yang jauh di bawah batas 25% menunjukkan bahwa estimasi yang diperoleh memiliki tingkat presisi yang tinggi sehingga hasil penelitian dapat dipercaya sebagai gambaran karakteristik populasi yang diteliti.
 
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
