@@ -76,7 +76,7 @@ Perkembangan **Artificial Intelligence (AI)**, khususnya **ChatGPT**, telah memb
 
 Bagi mahasiswa Program Studi Statistika, pemanfaatan ChatGPT memiliki relevansi yang lebih spesifik dibandingkan program studi lain, mengingat aktivitas perkuliahan di bidang ini sarat dengan pengolahan data, analisis statistik, dan pemrograman, di mana ChatGPT dapat digunakan baik sebagai alat bantu pemahaman konsep maupun penyelesaian tugas teknis. Kondisi ini memunculkan pertanyaan penting mengenai sejauh mana ketergantungan mahasiswa terhadap ChatGPTI dalam proses berpikir dan menyelesaikan permasalahan statistik secara mandiri. 
 
-Meningkatnya pemanfaatan ChatGPT mendorong perlunya pengukuran secara kuantitatif mengenai intensitas penggunaannya di lingkungan akademik. Oleh karena itu, penelitian ini menggunakan pendekatan survei dengan desain **Cluster Sampling Dua Tahap** agar diperoleh estimasi yang representatif terhadap populasi mahasiswa Program Studi Statistika Universitas Mataram.
+Meningkatnya pemanfaatan ChatGPT mendorong perlunya pengukuran secara kuantitatif untuk mengestimasi tingkat pemanfaatan ChatGPT pada mahasiswa Program Studi Statistika Universitas Mataram. Estimasi tingkat tersebut diperlukan agar dapat menggambarkan kondisi pemanfaatan ChatGPT pada populasi secara representatif serta menjawab permasalahan yang diangkat dalam penelitian ini. Oleh karena itu, penelitian ini menggunakan pendekatan survei dengan desain Cluster Sampling Dua Tahap agar diperoleh estimasi yang representatif terhadap populasi mahasiswa Program Studi Statistika Universitas Mataram.
 
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
@@ -570,10 +570,10 @@ Berdasarkan hasil analisis menggunakan metode **Cluster Sampling Dua Tahap**, di
 3. Hasil data cleaning menunjukkan tidak terdapat data hilang maupun data duplikat sehingga seluruh data layak dianalisis.
 
 4. Bobot akhir setiap responden sebesar **5,50**, sesuai dengan peluang pemilihan pada desain Cluster Sampling Dua Tahap.
-
-5. Estimasi rata-rata skor pemanfaatan ChatGPT sebesar **41,50** dengan **Standard Error sebesar 0,60** dan **Confidence Interval 95% sebesar 40,324–42,676**.
-
-Secara keseluruhan, penelitian ini menunjukkan bahwa pemanfaatan ChatGPT oleh mahasiswa Program Studi Statistika Universitas Mataram tergolong tinggi, dan pendekatan **Cluster Sampling Dua Tahap** mampu menghasilkan estimasi yang baik berdasarkan indikator kualitas estimasi yang diperoleh.
+   
+5. Estimasi rata-rata tingkat pemanfaatan ChatGPT pada mahasiswa Program Studi Statistika Universitas Mataram sebesar 41,50 dengan Standard Error sebesar 0,60 dan Confidence Interval 95% sebesar 40,324–42,676. Berdasarkan kategori tingkat pemanfaatan yang telah ditetapkan, nilai estimasi tersebut termasuk dalam kategori sangat tinggi.
+   
+Secara keseluruhan, penelitian ini menunjukkan bahwa tingkat pemanfaatan ChatGPT pada mahasiswa Program Studi Statistika Universitas Mataram berada pada kategori sangat tinggi. Selain itu, pendekatan Cluster Sampling Dua Tahap mampu menghasilkan estimasi yang representatif terhadap populasi dengan kualitas estimasi yang baik.
 
 <p align="right">
 <a href="#daftar-isi">⬆️ Kembali ke Daftar Isi</a>
